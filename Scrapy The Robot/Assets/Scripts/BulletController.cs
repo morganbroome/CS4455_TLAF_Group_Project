@@ -35,6 +35,7 @@ public class BulletController : MonoBehaviour
         } else
         {
             transform.position = parent.transform.position;
+            shootOn = false;
         }
     }
 }
