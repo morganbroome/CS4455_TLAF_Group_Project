@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using CS4455.Utility;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class PlayerController : MonoBehaviour
 {
@@ -88,6 +89,15 @@ public class PlayerController : MonoBehaviour
         if (collision.transform.gameObject.tag == "Ground")
         {
             --groundContactCount;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Pickup"))
+        {
+            other.gameObject.GetComponent<Collectable>().HandleCollectablePickup();
+            other.gameObject.SetActive(false);
         }
     }
 
