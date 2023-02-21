@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7886,6 +7886,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 631057079}
+  - component: {fileID: 631057080}
   m_Layer: 10
   m_Name: Scrappy
   m_TagString: Player
@@ -7909,6 +7910,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &631057080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631057078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 179ca05599d654e4ead708d67eac6fbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turn: {x: 0, y: 0}
+  smooth: 5
 --- !u!4 &639332286 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2988411766216105180, guid: bb4a693b43f3f0549813ab46457039db, type: 3}
@@ -12683,6 +12698,8 @@ MonoBehaviour:
   chassis: {fileID: 1277034545}
   jumpableGroundNormalMaxAngle: 45
   closeToJumpableGround: 0
+  turn: {x: 0, y: 0}
+  smooth: 5
 --- !u!114 &1044988396
 MonoBehaviour:
   m_ObjectHideFlags: 0
