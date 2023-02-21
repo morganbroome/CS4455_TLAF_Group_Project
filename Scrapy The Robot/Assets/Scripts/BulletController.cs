@@ -5,37 +5,53 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
 
-    public bool shootOn = false;
-    public GameObject parent;
-
-    void FixedUpdate()
+    public float life = 3;
+    private void Awake()
     {
-        if (shootOn)
-        {
-            transform.position += new Vector3((float)0.25, 0, 0);
-        } else {
-            transform.position = parent.transform.position;
-        }
-
+        Destroy(gameObject, life);
     }
 
-    void Update() 
+    private void OnCollisionEnter(Collision collision)
     {
-        if (Input.GetKeyDown("r"))
-        {
-            shootOn = !shootOn;
-        }
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Breakable"))
+        if (collision.gameObject.CompareTag("Breakable"))
         {
-            other.gameObject.SetActive(false);
-        } else
-        {
-            transform.position = parent.transform.position;
-            shootOn = false;
+            collision.gameObject.SetActive(false);
+            //Destroy(collision.gameObject);
         }
+        Destroy(gameObject);
     }
+    //public bool shootOn = false;
+    //public GameObject parent;
+
+    //void FixedUpdate()
+    //{
+    //    if (shootOn)
+    //    {
+    //        transform.position += new Vector3(0, 0, (float)0.25);
+    //    } else {
+    //        transform.position = parent.transform.position;
+    //    }
+
+    //}
+
+    //void Update() 
+    //{
+    //    if (Input.GetKeyDown("r"))
+    //    {
+    //        shootOn = !shootOn;
+    //    }
+    //}
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("Breakable"))
+    //    {
+    //        other.gameObject.SetActive(false);
+    //    } else
+    //    {
+    //        transform.position = parent.transform.position;
+    //        shootOn = false;
+    //    }
+    //}
 }
