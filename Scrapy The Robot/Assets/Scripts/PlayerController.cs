@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public Vector3 fullMovement;
+
 
     void Start()
     {
@@ -38,8 +40,9 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
 
-        movementX = movementVector.x;
-        movementY = movementVector.y;
+        Vector3 horizontalMovement = movementVector.x * transform.right;
+        Vector3 forwardMovement = movementVector.y * transform.forward;
+        fullMovement = horizontalMovement + forwardMovement;
     }
 
     void OnJump()
@@ -47,12 +50,12 @@ public class PlayerController : MonoBehaviour
         if(IsGrounded)
         {
             //jump
-            rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.VelocityChange);
         } 
         else if(!hasDoubleJumped)
         {
             //jump
-            rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.VelocityChange);
             //particle effect
 
             //limit to one
@@ -62,9 +65,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 movement = new Vector3(movementX, 0.0f, movementY);
+        //Vector3 movement = new Vector3(movementX, 0.0f, movementY);
 
-        rb.AddForce(movement * speed);
+        Vector3 movement = fullMovement;
+
+        rb.AddForce(movement * speed, ForceMode.VelocityChange);
 
         bool isGrounded = IsGrounded || CheckGroundNear(this.transform.position, jumpableGroundNormalMaxAngle, 0.1f, 1f, out closeToJumpableGround);
     }
