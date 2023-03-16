@@ -1,7 +1,7 @@
 # CS4455_TLAF_Group_Project
 
 # **i. Start scene file**
-"MenuScene"
+"GameMenuScene_Profiles"
 # **ii. How to play and what parts of the level to observe technology requirements**
 ## 3D Feel Game
 - Players can win the game by collecting all the coins
