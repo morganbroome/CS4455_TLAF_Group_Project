@@ -1,12 +1,5 @@
 # CS4455_TLAF_Group_Project
 
-2/7/2023 - Guy
-Added Basic Level
-Added Basic Character Model
-Added Basic Movement and Double Jump
-
-
-
 # **i. Start scene file**
 "MenuScene"
 # **ii. How to play and what parts of the level to observe technology requirements**
@@ -98,4 +91,10 @@ Implemented
 ### Assets Implemented
 
 ### C# Scripts Built
+
+
+2/7/2023 - Guy
+Added Basic Level
+Added Basic Character Model
+Added Basic Movement and Double Jump
 
