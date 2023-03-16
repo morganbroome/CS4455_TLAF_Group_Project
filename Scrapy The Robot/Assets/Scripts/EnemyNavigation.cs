@@ -30,7 +30,7 @@ public class EnemyNavigation : MonoBehaviour
         wp = GameObject.FindGameObjectWithTag("Player");
         agent = this.GetComponent<NavMeshAgent>();
         agent.stoppingDistance = stoppingDistance;
-        agent.SetDestination(wp.transform.position);
+        agent.SetDestination(waypoints[currWaypoint].transform.position);
     }
 
     void Update()
