@@ -9,13 +9,13 @@ Added Basic Movement and Double Jump
 
 # **i. Start scene file**
 "MenuScene"
-#**ii. How to play and what parts of the level to observe technology requirements**
-##3D Feel Game
+# **ii. How to play and what parts of the level to observe technology requirements**
+## 3D Feel Game
 - Players can win the game by collecting all the coins
 - Can press 'Esc' to bring up game menu
 - 
 
-##Goals/Sub Goals
+## Goals/Sub Goals
 5 Main Puzzles
 	- Pillars
 	- Movable boxes
@@ -24,7 +24,7 @@ Added Basic Movement and Double Jump
 	- Space Ship
 Getting to the end of these puzzles will reward you with coins/points. When players collect all the coins they will win the game and be brought to the win screen. If a player is killed by an enemy or falls off the map they will be sent to the spawn point but their progress will remain.
 
-##3D Character/Real Time Control
+## 3D Character/Real Time Control
 Controls
 - Up Key: Move forward
 - Down Key: Move backwards
@@ -38,38 +38,38 @@ Controls
 
 
 
-##3D World with Physical/Spatial Simulation
+## 3D World with Physical/Spatial Simulation
 - elevator that starts when stepped on
 - boulders that roll from castle entrance
 - Destroyable crates
 
 
-##AI/ RealTimeNPC
+## AI/ RealTimeNPC
 - Can find enemies with AI right outside of starting area
 - If enemy touches scrappy they will be sent back to spawn point
 
-##Polish
+## Polish
 - Game can be paused with 'Esc' key
 
-#**iii. Known problem areas**
+# **iii. Known problem areas**
 
-#**iv. Manifest of which files authored by each teammate:**
+# **iv. Manifest of which files authored by each teammate:**
 
-##Nifemi Bolu
-###What did I do?
+## Nifemi Bolu
+### What did I do?
 Implemented 
 - Built the gun, in addition to shooting mechanics and effects
 - Each of the 5 Puzzles(level Design)
 - The elevator animations
 
-###Assets Implemented
+### Assets Implemented
 - Gun Prefab
 - Bullet Prefab
 - attackSphere
 - elevator
 
 
-###C# Scripts
+### C# Scripts
 - Gun
 - LaserToggle
 - ballLife
@@ -77,24 +77,24 @@ Implemented
 - spawnBall
 
 
-##Guy Broome
-###What did I do?
+## Guy Broome
+### What did I do?
 
-###Assets Implemented
+### Assets Implemented
 
-###C# Scripts Built
+### C# Scripts Built
 
-Ben Lathrop
-###What did I do?
+## Ben Lathrop
+### What did I do?
 
-###Assets Implemented
+### Assets Implemented
 
-###C# Scripts Built
+### C# Scripts Built
 
-Courage Agabi
-###What did I do?
+## Courage Agabi
+### What did I do?
 
-###Assets Implemented
+### Assets Implemented
 
-###C# Scripts Built
+### C# Scripts Built
 
