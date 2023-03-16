@@ -102,6 +102,11 @@ public class PlayerController : MonoBehaviour
             ++groundContactCount;
             hasDoubleJumped = false;
         }
+
+        if (collision.transform.gameObject.tag == "KillBox" || collision.transform.gameObject.tag == "Enemy")
+        {
+            this.transform.position = new Vector3(0, 0.5f, 0);
+        }
     }
 
     private void OnCollisionExit(Collision collision)

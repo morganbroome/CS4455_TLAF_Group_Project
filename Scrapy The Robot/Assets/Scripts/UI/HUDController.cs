@@ -47,5 +47,10 @@ public class HUDController : MonoBehaviour
         numCoins++;
         coinCounter.text = "COINS: " + numCoins.ToString();
         Debug.Log("Coin picked up! Updating UI...");
+
+        if (numCoins > 10)
+        {
+            coinCounter.text = "You have collected all the coins! You win!";
+        }
     }
 }

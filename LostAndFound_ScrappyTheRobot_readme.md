@@ -75,10 +75,23 @@ Implemented
 
 ## Guy Broome
 ### What did I do?
+Implemented
+- Base Character and Level Design
+- GUI (Except for Collectibles)
 
 ### Assets Implemented
+- Player Model
+- General Level Design (Great Wall, Starting Area, Rocket Ship, Ground, Ridges)
+- Starting Text and GUI For Starting the Game and Pause Menu
+- Kill box below the map
 
 ### C# Scripts Built
+- PlayerController (Movement)
+- GameQuitter
+- GameSTarter
+- PauseMenu Toggle
+- StartText
+- Static Camera for Debugging
 
 ## Ben Lathrop
 ### What did I do?

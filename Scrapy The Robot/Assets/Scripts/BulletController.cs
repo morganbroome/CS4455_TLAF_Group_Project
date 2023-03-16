@@ -14,7 +14,7 @@ public class BulletController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.gameObject.CompareTag("Breakable"))
+        if (collision.gameObject.CompareTag("Breakable") || collision.gameObject.CompareTag("Enemy"))
         {
             collision.gameObject.SetActive(false);
             //Destroy(collision.gameObject);

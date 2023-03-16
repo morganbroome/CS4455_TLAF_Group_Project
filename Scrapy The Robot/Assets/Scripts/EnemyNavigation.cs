@@ -19,7 +19,7 @@ public class EnemyNavigation : MonoBehaviour
 
     // For debugging
     public bool debugFlag = false;
-    GameObject wp;
+    public GameObject wp;
 
     // Waypoints
     public GameObject[] waypoints;
