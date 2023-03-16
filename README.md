@@ -7,7 +7,7 @@ Added Basic Movement and Double Jump
 
 
 
-#**i. Start scene file**
+# **i. Start scene file**
 "MenuScene"
 #**ii. How to play and what parts of the level to observe technology requirements**
 ##3D Feel Game
