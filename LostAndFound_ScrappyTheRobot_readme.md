@@ -15,6 +15,8 @@
 - Castle
 - Wall
 - Space Ship
+
+
 Getting to the end of these puzzles will reward you with coins/points. When players collect all the coins they will win the game and be brought to the win screen. If a player is killed by an enemy or falls off the map they will be sent to the spawn point but their progress will remain.
 
 ## 3D Character/Real Time Control
