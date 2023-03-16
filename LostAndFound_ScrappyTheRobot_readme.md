@@ -39,14 +39,15 @@ Controls
 
 
 ## 3D World with Physical/Spatial Simulation
-- elevator that starts when stepped on
-- boulders that roll from castle entrance
+- Elevator that starts when stepped on
+- Boulders that roll from castle entrance
 - Destroyable crates
+- Movable boxes
 
 
 ## AI/ RealTimeNPC
 - Can find enemies with AI right outside of starting area
-- If enemy touches scrappy they will be sent back to spawn point
+- If enemy touches scrappy he will be sent back to spawn point
 
 ## Polish
 - Game can be paused with 'Esc' key
