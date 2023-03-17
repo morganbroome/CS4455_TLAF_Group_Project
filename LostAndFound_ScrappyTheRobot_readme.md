@@ -78,6 +78,7 @@ Implemented
 Implemented
 - Base Character and Level Design
 - GUI (Except for Collectibles)
+- Started Controller Integration (Not Finished)
 
 ### Assets Implemented
 - Player Model
