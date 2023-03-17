@@ -88,7 +88,7 @@ Implemented
 ### C# Scripts Built
 - PlayerController (Movement)
 - GameQuitter
-- GameSTarter
+- GameStarter
 - PauseMenu Toggle
 - StartText
 - Static Camera for Debugging
