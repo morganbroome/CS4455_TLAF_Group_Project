@@ -9,9 +9,10 @@ public class Collectable : MonoBehaviour
     // Later on we can pass a gomeobject to the delegate so that we can be more specific about the event and event handling.
     public delegate void CollectableDelegate();
     public static event CollectableDelegate onCollectablePickup;
-
+    
     public GameObject particles;
-
+    //public AudioSource audioSource;
+    //public AudioClip clip;
     // Update is called once per frame
     void Update()
     {
@@ -20,7 +21,13 @@ public class Collectable : MonoBehaviour
 
     public void HandleCollectablePickup()
     {
+       
         onCollectablePickup?.Invoke();
         Instantiate(particles, transform.position, Quaternion.identity);
+       
+
+
     }
+
+ 
 }
