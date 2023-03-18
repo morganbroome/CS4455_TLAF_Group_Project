@@ -90,10 +90,30 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
     }
 
+    public Vector3 rocketshipPoint;
+    public Vector3 wallPoint;
+    public Vector3 originPoint;
     void Update()
     {
         chassis.transform.position = transform.position + chassisOffset;
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            transform.position = rocketshipPoint;
+        }
+
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            transform.position = wallPoint;
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            transform.position = originPoint;
+        }
     }
+
+ 
 
     void OnCollisionEnter(Collision collision)
     {
