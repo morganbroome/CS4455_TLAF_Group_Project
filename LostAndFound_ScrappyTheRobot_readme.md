@@ -28,16 +28,23 @@ Controls
 -'T' Key: Shoot one bullet
 - 'Y' Key: Shoot three bullets
 - 'o' Key: Turn on laser pointer
+
+Keys to Help TAs
+- 'B' Key: Teleport to the Rocket ship
+- 'N' Key: Teleport to top of Wall
+- 'M' Key: Teleport to Origin
 - Space bar: Jump (Double press for double jump)
 - Move mouse: Rotate left and right or up and down
 
 
 
 ## 3D World with Physical/Spatial Simulation
-- Elevator that starts when stepped on
+- Elevator that starts when stepped on(can be found at rocketship)
 - Boulders that roll from castle entrance
-- Destroyable crates
+- Destroyable crates(Can be found at starting point)
 - Movable boxes
+- Red button to open starting doors
+- Sound played when gun is shot
 
 
 ## AI/ RealTimeNPC
