@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyNavigation : MonoBehaviour
@@ -84,6 +85,12 @@ public class EnemyNavigation : MonoBehaviour
                             + "\nWaypoint velocity: " + target.velocity + "\nWaypoint speed: " + target.velocity.magnitude
                             + "\nWaypoint direction: " + target.direction + "\nPredicted distance: " + predictedDistance + "\nTarget position: " + targetPosition
                             + "\nDot product: " + dotProduct);
+            }
+
+            if (AtEndOfPath() && agent.remainingDistance <= agent.stoppingDistance && Vector3.Distance(agent.transform.position, wp.transform.position) < 5)
+            {
+                Debug.Log("Player game over");
+                SceneManager.LoadScene("Scrap Yard");
             }
 
 
