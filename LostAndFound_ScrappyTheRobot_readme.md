@@ -30,6 +30,7 @@ Controls
 - 'o' Key: Turn on laser pointer
 - Space bar: Jump (Double press for double jump)
 - Move mouse: Rotate left and right or up and down
+- 'Esc' Key: Menu
 
 Keys to Help TAs
 - 'Shift' + 'B' Key: Teleport to the Rocket ship
