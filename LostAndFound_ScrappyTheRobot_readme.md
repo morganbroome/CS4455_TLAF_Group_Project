@@ -28,13 +28,14 @@ Controls
 -'T' Key: Shoot one bullet
 - 'Y' Key: Shoot three bullets
 - 'o' Key: Turn on laser pointer
-
-Keys to Help TAs
-- 'B' Key: Teleport to the Rocket ship
-- 'N' Key: Teleport to top of Wall
-- 'M' Key: Teleport to Origin
 - Space bar: Jump (Double press for double jump)
 - Move mouse: Rotate left and right or up and down
+
+Keys to Help TAs
+- 'Shift' + 'B' Key: Teleport to the Rocket ship
+- 'Shift' + 'N' Key: Teleport to top of Wall
+- 'Shift' + 'M' Key: Teleport to Origin
+
 
 
 
