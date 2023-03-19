@@ -14,10 +14,15 @@ public class BulletController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.gameObject.CompareTag("Breakable") || collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Breakable"))
         {
             collision.gameObject.SetActive(false);
             //Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Enemy") && collision.collider.GetType() == typeof(BoxCollider))
+        {
+            print("yolo");
+            Destroy(collision.gameObject);
         }
         Destroy(gameObject);
     }
