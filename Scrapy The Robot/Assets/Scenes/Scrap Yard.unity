@@ -31971,7 +31971,7 @@ MonoBehaviour:
     double jump, and shoot with T. You may also pause the game with Esc. Look out
     for Rogue Robots, if they touch you, you will be sent back to the warehouse.
     And most importantly, have fun! PS:TAs you can teleport to hard to reach places
-    by pressing the Keys 'B', 'N', or back to start with 'M'
+    by pressing Shift + the Keys 'B', 'N', or back to start with 'M'
 --- !u!222 &1656224535
 CanvasRenderer:
   m_ObjectHideFlags: 0
