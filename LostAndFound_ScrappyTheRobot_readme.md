@@ -53,8 +53,10 @@ Keys to Help TAs
 
 ## Polish
 - Game can be paused with 'Esc' key
+- Particle effect when coin is collected
 
 # **iii. Known problem areas**
+-Elevator is a bit buggy
 
 # **iv. Manifest of which files authored by each teammate:**
 
