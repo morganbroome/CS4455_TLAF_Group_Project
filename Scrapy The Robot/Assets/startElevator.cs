@@ -33,10 +33,11 @@ public class startElevator : MonoBehaviour
     //    //character.transform.position += character.transform.up * Time.deltaTime;
     //    other.transform.SetParent(transform);
     //}
-
+    public float animSpeed = 0.3f;
     private void OnCollisionEnter(Collision collision)
     {
         anim.Play("elevate");
+        anim["elevate"].speed = animSpeed;
         collision.transform.SetParent(transform);
 
     }
