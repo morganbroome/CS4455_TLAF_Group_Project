@@ -86,6 +86,7 @@ Implemented
 - Base Character and Level Design
 - GUI (Except for Collectibles)
 - Started Controller Integration (Not Finished)
+- Character Movement adjustments
 
 ### Assets Implemented
 - Player Model
@@ -101,23 +102,29 @@ Implemented
 - StartText
 - Static Camera for Debugging
 
-## Ben Lathrop
-### What did I do?
+Ben Lathrop
+###What did I do?
+- Camera functionality
+- Character movement tweaking
+- Character/Camera rotation functionality
+- AI Implementation fixing
+- Character Animation
 
-### Assets Implemented
+###Assets Implemented
+- Character Animation
 
-### C# Scripts Built
-
-## Courage Agabi
-### What did I do?
-
-### Assets Implemented
-
-### C# Scripts Built
+###C# Scripts Built
+- PlayerController
+- EnemyStateManager
 
 
-2/7/2023 - Guy
-Added Basic Level
-Added Basic Character Model
-Added Basic Movement and Double Jump
+Courage Agabi
+###What did I do?
+- AI Implementation
+
+###Assets Implemented
+
+###C# Scripts Built
+- EnemyStateManager
+- EnemyNavigation
 
