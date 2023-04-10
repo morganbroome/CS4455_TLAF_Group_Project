@@ -62,7 +62,8 @@ public class PlayerController : MonoBehaviour
         else if (!hasDoubleJumped)
         {
             //jump
-            rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.VelocityChange);
+            Vector3 currVelo = rb.velocity;
+            rb.AddForce(new Vector3(0, jumpForce - currVelo.y, 0), ForceMode.VelocityChange);
             //particle effect
 
             //limit to one
