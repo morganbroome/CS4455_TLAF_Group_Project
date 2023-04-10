@@ -98,17 +98,17 @@ public class PlayerController : MonoBehaviour
     {
         chassis.transform.position = transform.position + chassisOffset;
 
-        if (Input.GetKey(KeyCode.B) && Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+        if (Input.GetKey(KeyCode.B) && Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) && Input.GetKey(KeyCode.B))
         {
             transform.position = rocketshipPoint; 
         }
 
-        if (Input.GetKey(KeyCode.N) && Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+        if (Input.GetKey(KeyCode.N) && Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) && Input.GetKey(KeyCode.N))
         {
             transform.position = wallPoint;
         }
 
-        if (Input.GetKey(KeyCode.M) && Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+        if (Input.GetKey(KeyCode.M) && Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) && Input.GetKey(KeyCode.M))
         {
             transform.position = originPoint;
         }
