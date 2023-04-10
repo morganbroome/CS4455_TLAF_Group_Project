@@ -24,8 +24,8 @@ public class startElevator : MonoBehaviour
     //    anim.Play("elevate");
     //}
 
-    public GameObject movePlatform;
-    public GameObject character;
+    //public GameObject movePlatform;
+    //public GameObject character;
 
     //private void OnTriggerStay(Collider other)
     //{
@@ -36,8 +36,8 @@ public class startElevator : MonoBehaviour
     public float animSpeed = 0.3f;
     private void OnCollisionEnter(Collision collision)
     {
-        anim.Play("elevate");
-        anim["elevate"].speed = animSpeed;
+        anim.Play("newElevate");
+        anim["newElevate"].speed = animSpeed;
         collision.transform.SetParent(transform);
 
     }

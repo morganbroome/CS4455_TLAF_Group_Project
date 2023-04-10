@@ -14,13 +14,13 @@ public class Gun : MonoBehaviour
     
 
     void Update() {
-        if(Input.GetKeyDown(KeyCode.T)) {
+        if(Input.GetKeyDown(KeyCode.Mouse0)) {
             var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
             audioSource.PlayOneShot(clip);
         }
 
-        if (Input.GetKeyDown(KeyCode.Y))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
