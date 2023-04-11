@@ -124,7 +124,7 @@ public class PlayerController : MonoBehaviour
             hasDoubleJumped = false;
         }
 
-        if (collision.transform.gameObject.tag == "KillBox" || collision.transform.gameObject.tag == "Enemy")
+        if (collision.transform.gameObject.tag == "KillBox")
         {
             this.transform.position = new Vector3(0, 0.5f, 0);
         }
