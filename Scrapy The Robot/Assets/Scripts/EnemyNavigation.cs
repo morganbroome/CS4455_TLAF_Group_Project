@@ -23,11 +23,20 @@ public class EnemyNavigation : MonoBehaviour
     public GameObject wp;
 
     // Waypoints
-    public GameObject[] waypoints;
+    public GameObject waypointParent;
+    public List<GameObject> waypoints;
     public int currWaypoint;
 
     void Start()
     {
+        Transform[] buffer = waypointParent.GetComponentsInChildren<Transform>();
+        foreach (Transform child in buffer)
+        {
+            if (child != buffer[0])
+            {
+                waypoints.Add(child.gameObject);
+            }
+        }
         wp = GameObject.FindGameObjectWithTag("Player");
         agent = this.GetComponent<NavMeshAgent>();
         agent.stoppingDistance = stoppingDistance;
@@ -125,8 +134,8 @@ public class EnemyNavigation : MonoBehaviour
     }
     private void SetNextWaypoint()
     {
-        currWaypoint = (currWaypoint + 1) % waypoints.Length;
-        if (waypoints.Length > 0)
+        currWaypoint = (currWaypoint + 1) % waypoints.Count;
+        if (waypoints.Count > 0)
         {
             agent.SetDestination(waypoints[currWaypoint].transform.position);
             targetPosition = waypoints[currWaypoint].transform.position;

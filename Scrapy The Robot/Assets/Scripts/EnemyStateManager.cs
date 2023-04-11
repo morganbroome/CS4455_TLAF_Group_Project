@@ -29,6 +29,16 @@ public class EnemyStateManager : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.transform.gameObject.tag == "Player")
+        {
+            state = State.Patrol;
+            other.transform.position = new Vector3(0, 0.5f, 0);
+            Debug.Log("Player killed");
+        }
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")

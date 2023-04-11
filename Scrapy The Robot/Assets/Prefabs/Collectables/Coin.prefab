@@ -28,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836458385405030069}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.83, z: 3.02}
-  m_LocalScale: {x: 1, y: 1, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &8553792512150834077
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -125,8 +125,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 153acdc884ef30f4191fdba5cd3883dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door1: {fileID: 0}
-  door2: {fileID: 0}
   particles: {fileID: 0}
-  audioSource: {fileID: 0}
-  clip: {fileID: 8300000, guid: 8a9bfa382663a47bb8d269a89441ed51, type: 3}
