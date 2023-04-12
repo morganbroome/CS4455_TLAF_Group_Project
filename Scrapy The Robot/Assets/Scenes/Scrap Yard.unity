@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9864,6 +9864,7 @@ MonoBehaviour:
   rotationMaxSpeed: 500
   desiredPose: {fileID: 2067782485}
   target: {fileID: 631057079}
+  camTarget: {fileID: 2067782484}
 --- !u!114 &422846934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40215,6 +40216,7 @@ GameObject:
   - component: {fileID: 2067782488}
   - component: {fileID: 2067782487}
   - component: {fileID: 2067782486}
+  - component: {fileID: 2067782489}
   m_Layer: 0
   m_Name: CamTarget
   m_TagString: Untagged
@@ -40298,6 +40300,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067782484}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2067782489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067782484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6801928243682604eb49a05b33a74d88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turn: {x: 0, y: 0}
+  smooth: 5
 --- !u!4 &2069962506 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2988411766216105180, guid: bb4a693b43f3f0549813ab46457039db, type: 3}

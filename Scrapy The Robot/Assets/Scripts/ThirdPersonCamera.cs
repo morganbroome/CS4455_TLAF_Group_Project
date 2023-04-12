@@ -9,7 +9,8 @@ public class ThirdPersonCamera : MonoBehaviour
     public float rotationMaxSpeed = 50f;
 	public Transform desiredPose;			// the desired pose for the camera, specified by a transform in the game
     public Transform target;
-	
+
+    public GameObject camTarget;
     protected Vector3 currentPositionCorrectionVelocity;
     //protected Vector3 currentFacingCorrectionVelocity;
     //protected float currentFacingAngleCorrVel;
