@@ -106,13 +106,12 @@ public class PlayerController : MonoBehaviour
 
         rb.AddForce(movement * speed, ForceMode.VelocityChange);
 
-        bool isGrounded = IsGrounded || CheckGroundNear(this.transform.position, jumpableGroundNormalMaxAngle, 0.1f, 1f, out closeToJumpableGround);
+        //bool isGrounded = IsGrounded || CheckGroundNear(this.transform.position, jumpableGroundNormalMaxAngle, 0.1f, 1f, out closeToJumpableGround);
 
-        turn.x += Input.GetAxis("Mouse X");
-        turn.y += Input.GetAxis("Mouse Y");
-        Quaternion target = Quaternion.Euler(0, turn.x, 0);
-
-        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
+        //turn.x += Input.GetAxis("Mouse X");
+        //turn.y += Input.GetAxis("Mouse Y");
+        //Quaternion target = Quaternion.Euler(0, turn.x, 0);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
     }
 
     public Vector3 rocketshipPoint;
