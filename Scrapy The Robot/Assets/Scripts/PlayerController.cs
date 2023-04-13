@@ -34,10 +34,19 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementVector;
 
 
+    //passthroughs
+    public GameObject gun;
+    public GameObject pauseMenu;
+
+    Gun gunScript;
+    PauseMenuToggle pause;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         chassisOffset = chassis.transform.position - transform.position;
+        gunScript = gun.GetComponent<Gun>();
+        pause = pauseMenu.GetComponent<PauseMenuToggle>();
     }
 
     void OnMove(InputValue movementValue)
@@ -69,6 +78,21 @@ public class PlayerController : MonoBehaviour
             //limit to one
             hasDoubleJumped = true;
         }
+    }
+
+    void OnFire()
+    {
+        gunScript.Fire();
+    }
+
+    void OnSecondary()
+    {
+        gunScript.Secondary();
+    }
+
+    void OnPause()
+    {
+        pause.Pause();
     }
 
     void FixedUpdate()

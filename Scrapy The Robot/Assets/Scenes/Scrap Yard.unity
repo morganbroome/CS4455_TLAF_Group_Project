@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16601,6 +16601,8 @@ MonoBehaviour:
   fullMovement: {x: 0, y: 0, z: 0}
   turn: {x: 0, y: 0}
   smooth: 5
+  gun: {fileID: 4169267647589410233}
+  pauseMenu: {fileID: 660864782}
   rocketshipPoint: {x: -2.5, y: 52.847, z: 360.7}
   wallPoint: {x: -3.61, y: 40.49622, z: 243.21066}
   originPoint: {x: 0, y: 0.26000977, z: 0}
@@ -26667,6 +26669,8 @@ MonoBehaviour:
   fullMovement: {x: 0, y: 0, z: 0}
   turn: {x: 0, y: 0}
   smooth: 5
+  gun: {fileID: 0}
+  pauseMenu: {fileID: 0}
   rocketshipPoint: {x: 0, y: 0, z: 0}
   wallPoint: {x: 0, y: 0, z: 0}
   originPoint: {x: 0, y: 0, z: 0}
