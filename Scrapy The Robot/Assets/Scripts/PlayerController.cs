@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.UI;
 using CS4455.Utility;
 
 public class PlayerController : MonoBehaviour
@@ -34,10 +35,37 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementVector;
 
 
+    //passthroughs
+    public GameObject gun;
+    public GameObject pauseMenu;
+    public GameObject lasertoggle;
+
+    Gun gunScript;
+    PauseMenuToggle pause;
+    LaserToggle laser;
+
+    //new camera stuff
+    public Vector2 _move;
+    public Vector2 _look;
+    public Vector3 nextPosition;
+    public Quaternion nextRotation;
+
+    public float rotationPower = 3f;
+    public float rotationLerp = 0.5f;
+
+    public float Camspeed = 1f;
+    public Camera cam;
+    public GameObject followTransform;
+    public Slider slider;
+    
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         chassisOffset = chassis.transform.position - transform.position;
+        gunScript = gun.GetComponent<Gun>();
+        pause = pauseMenu.GetComponent<PauseMenuToggle>();
+        laser = lasertoggle.GetComponent<LaserToggle>();
     }
 
     void OnMove(InputValue movementValue)
@@ -71,8 +99,34 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void OnFire()
+    {
+        gunScript.Fire();
+    }
+
+    void OnSecondary()
+    {
+        gunScript.Secondary();
+    }
+
+    void OnPause()
+    {
+        pause.Pause();
+    }
+
+    void OnLaser()
+    {
+        laser.Laser();
+    }
+
+    public void OnLook(InputValue value)
+    {
+        _look = value.Get<Vector2>();
+    }
+
     void FixedUpdate()
     {
+        
         //Vector3 movement = new Vector3(movementX, 0.0f, movementY);
         Vector3 horizontalMovement = movementVector.x * transform.right;
         Vector3 forwardMovement = movementVector.y * transform.forward;
@@ -82,13 +136,51 @@ public class PlayerController : MonoBehaviour
 
         rb.AddForce(movement * speed, ForceMode.VelocityChange);
 
-        bool isGrounded = IsGrounded || CheckGroundNear(this.transform.position, jumpableGroundNormalMaxAngle, 0.1f, 1f, out closeToJumpableGround);
+        //bool isGrounded = IsGrounded || CheckGroundNear(this.transform.position, jumpableGroundNormalMaxAngle, 0.1f, 1f, out closeToJumpableGround);
 
-        turn.x += Input.GetAxis("Mouse X");
-        turn.y += Input.GetAxis("Mouse Y");
-        Quaternion target = Quaternion.Euler(0, turn.x, 0);
+        //turn.x += Input.GetAxis("Mouse X");
+        //turn.y += Input.GetAxis("Mouse Y");
+        //Quaternion target = Quaternion.Euler(0, turn.x, 0);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
 
-        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
+        //New Camera stuff
+        rotationPower = slider.value;
+
+        #region Player Based Rotation
+
+        //Move the player based on the X input on the controller
+        transform.rotation *= Quaternion.AngleAxis(_look.x * rotationPower, Vector3.up);
+
+        #endregion
+
+        #region Follow Transform Rotation
+
+        //Rotate the Follow Target transform based on the input
+        followTransform.transform.rotation *= Quaternion.AngleAxis(_look.x * rotationPower, Vector3.up);
+
+        #endregion
+
+        #region Vertical Rotation
+        followTransform.transform.rotation *= Quaternion.AngleAxis(_look.y * rotationPower, Vector3.right);
+
+        var angles = followTransform.transform.localEulerAngles;
+        angles.z = 0;
+
+        var angle = followTransform.transform.localEulerAngles.x;
+
+        //Clamp the Up/Down rotation
+        if (angle > 180 && angle < 340)
+        {
+            angles.x = 340;
+        }
+        else if (angle < 180 && angle > 40)
+        {
+            angles.x = 40;
+        }
+
+
+        followTransform.transform.localEulerAngles = angles;
+        #endregion
     }
 
     public Vector3 rocketshipPoint;

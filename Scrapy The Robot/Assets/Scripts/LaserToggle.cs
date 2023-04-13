@@ -12,20 +12,8 @@ public class LaserToggle : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Laser()
     {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-
-            //if (laser.activeSelf)
-            //{
-            //    laser.SetActive(false);
-            //} else
-            //{
-            //    laser.SetActive(true);
-            //}
-            GetComponent<Renderer>().enabled = !GetComponent<Renderer>().enabled;
-
-        }
+        GetComponent<Renderer>().enabled = !GetComponent<Renderer>().enabled;
     }
 }

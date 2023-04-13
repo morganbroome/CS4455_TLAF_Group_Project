@@ -12,6 +12,9 @@ public class HUDController : MonoBehaviour
 
     private int numCoins;
 
+    public AudioSource audioSource;
+    public AudioClip clip;
+
     private void OnEnable()
     {
         // Subscribe to collectable event
@@ -34,6 +37,7 @@ public class HUDController : MonoBehaviour
         // Default values
         numCoins = 0;
         coinCounter.text = "COINS: " + numCoins.ToString();
+        
     }
 
     // Update is called once per frame
@@ -47,6 +51,7 @@ public class HUDController : MonoBehaviour
         numCoins++;
         coinCounter.text = "COINS: " + numCoins.ToString();
         Debug.Log("Coin picked up! Updating UI...");
+        audioSource.PlayOneShot(clip);
 
         if (numCoins > 10)
         {
