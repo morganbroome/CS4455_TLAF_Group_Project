@@ -57,6 +57,7 @@ public class PlayerController : MonoBehaviour
     public Camera cam;
     public GameObject followTransform;
     public Slider slider;
+    public PlayerInput playerIn;
     
 
     void Start()
@@ -66,6 +67,7 @@ public class PlayerController : MonoBehaviour
         gunScript = gun.GetComponent<Gun>();
         pause = pauseMenu.GetComponent<PauseMenuToggle>();
         laser = lasertoggle.GetComponent<LaserToggle>();
+        playerIn = this.GetComponent<PlayerInput>();
     }
 
     void OnMove(InputValue movementValue)
@@ -145,6 +147,11 @@ public class PlayerController : MonoBehaviour
 
         //New Camera stuff
         rotationPower = slider.value;
+        //If Using controler
+        if(playerIn.currentControlScheme == "Gamepad") 
+        {
+            rotationPower = (((slider.value - 0.1f) * 1.5f) / 0.5f) + 2f;
+        }
 
         #region Player Based Rotation
 
