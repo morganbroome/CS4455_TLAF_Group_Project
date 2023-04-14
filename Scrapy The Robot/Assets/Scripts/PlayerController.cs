@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour
         #endregion
 
         #region Vertical Rotation
-        followTransform.transform.rotation *= Quaternion.AngleAxis(_look.y * rotationPower, Vector3.right);
+        followTransform.transform.rotation *= Quaternion.AngleAxis(-_look.y * rotationPower, Vector3.right);
 
         var angles = followTransform.transform.localEulerAngles;
         angles.z = 0;
