@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 chassisOffset;
     private int groundContactCount = 0;
     private bool hasDoubleJumped;
+    public AudioSource audioSource;
+    public AudioClip clip;
 
     public float speed = 0;
     public float jumpForce = 0;
@@ -88,6 +90,7 @@ public class PlayerController : MonoBehaviour
         {
             //jump
             rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.VelocityChange);
+            audioSource.PlayOneShot(clip);
         }
         else if (!hasDoubleJumped)
         {
@@ -98,6 +101,7 @@ public class PlayerController : MonoBehaviour
 
             //limit to one
             hasDoubleJumped = true;
+            audioSource.PlayOneShot(clip);
         }
     }
 

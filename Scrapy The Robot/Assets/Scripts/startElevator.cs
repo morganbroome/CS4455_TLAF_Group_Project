@@ -5,6 +5,7 @@ using UnityEngine;
 public class startElevator : MonoBehaviour
 {
     public Animation anim;
+    public GameObject holding;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +39,7 @@ public class startElevator : MonoBehaviour
     {
         anim.Play("newElevate");
         anim["newElevate"].speed = animSpeed;
-        collision.transform.SetParent(transform);
+        collision.transform.SetParent(holding.transform);
 
     }
 
