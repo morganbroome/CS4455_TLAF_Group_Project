@@ -13,8 +13,6 @@ public class GameQuitter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.X))
-            QuitGame();
         
     }
 
