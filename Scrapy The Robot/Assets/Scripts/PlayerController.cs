@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private int groundContactCount = 0;
     private bool hasDoubleJumped;
     public AudioSource audioSource;
-    public AudioClip clip;
+    public AudioClip[] clip;
 
     public float speed = 0;
     public float jumpForce = 0;
@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
         {
             //jump
             rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.VelocityChange);
-            audioSource.PlayOneShot(clip);
+            audioSource.PlayOneShot(clip[0]);
         }
         else if (!hasDoubleJumped)
         {
@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
 
             //limit to one
             hasDoubleJumped = true;
-            audioSource.PlayOneShot(clip);
+            audioSource.PlayOneShot(clip[0]);
         }
     }
 
@@ -297,5 +297,10 @@ public class PlayerController : MonoBehaviour
         isJumpable = _isJumpable;
 
         return ret;
+    }
+
+    public void playDeathSound()
+    {
+        audioSource.PlayOneShot(clip[1]);
     }
 }

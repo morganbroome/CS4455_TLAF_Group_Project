@@ -6,6 +6,7 @@ public class BulletController : MonoBehaviour
 {
 
     public float life = 3;
+    public float delayTime = 4.0f; // for enemies
     private void Awake()
     {
         Destroy(gameObject, life);
@@ -22,10 +23,28 @@ public class BulletController : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") && collision.collider.GetType() == typeof(BoxCollider))
         {
             print("yolo");
-            Destroy(collision.gameObject);
+            StartCoroutine(DisableAndDestroyCoroutine(collision.gameObject));
+            //Destroy(collision.gameObject);
         }
         Destroy(gameObject);
     }
+
+    private IEnumerator DisableAndDestroyCoroutine(GameObject myGameObject)
+    {
+        // Disable the game object
+        myGameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+        myGameObject.GetComponent<BoxCollider>().enabled = false;
+        myGameObject.GetComponent<SphereCollider>().enabled = false;
+        myGameObject.GetComponent<EnemyStateManager>().playDeathSound();
+        //myGameObject.SetActive(false);
+
+        // Wait for a few seconds
+        yield return new WaitForSeconds(delayTime);
+
+        // Destroy the game object
+        Destroy(myGameObject);
+    }
+
     //public bool shootOn = false;
     //public GameObject parent;
 

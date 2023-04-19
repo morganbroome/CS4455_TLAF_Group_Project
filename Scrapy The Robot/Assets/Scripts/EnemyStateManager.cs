@@ -11,6 +11,8 @@ public class EnemyStateManager : MonoBehaviour
     }
     public State state;
     public float range = 1.5f;
+    public AudioSource audioSource;
+    public AudioClip[] clip;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class EnemyStateManager : MonoBehaviour
         {
             state = State.Chase;
             GetComponent<SphereCollider>().radius *= range;
+            audioSource.PlayOneShot(clip[Random.Range(0, 3)]);
             Debug.Log("Player detected");
         }
         
@@ -35,6 +38,7 @@ public class EnemyStateManager : MonoBehaviour
         {
             state = State.Patrol;
             other.transform.position = new Vector3(0, 0.5f, 0);
+            other.transform.GetComponent<PlayerController>().playDeathSound();
             Debug.Log("Player killed");
         }
     }
@@ -47,5 +51,9 @@ public class EnemyStateManager : MonoBehaviour
             GetComponent<SphereCollider>().radius /= range;
             Debug.Log("Player lost");
         }
+    }
+    public void playDeathSound()
+    {
+        audioSource.PlayOneShot(clip[Random.Range(3, 6)]);
     }
 }
