@@ -74,7 +74,7 @@ Keys to Help TAs
 Implemented 
 - Built the gun, in addition to shooting mechanics and effects
 - Level Design: Crate Wall, Caves
-- Contributed to puzzles ex: Cave Puzzle,Rocketship Puzzle, Castle Puzzle
+- Contributed to puzzles ex: Cave Puzzle,Rocketship Puzzle, Castle Puzzle, Push Box puzzle
 - The elevator animations
 - Button Press to open door
 - Sound effects: Background Music, Jump sound, shooting sound, dying sound
