@@ -96,53 +96,61 @@ Implemented
 Implemented
 - Base Character and Level Design
 - GUI (Except for Collectibles)
+- Started Controller Integration (Not Finished)
 - Character Movement adjustments
-- Controller Implementation (and related refactoring)
+- Controller Implementation
 - Small Contribution to Puzzles
-- Character Camera Ajustments and Senstitivity Slider
+- Character Camera Ajustments
 
 ### Assets Implemented
 - Player Model
 - General Level Design (Great Wall, Starting Area, Rocket Ship, Ground, Ridges)
 - Starting Text and GUI For Starting the Game and Pause Menu
 - Kill box below the map
-- Coin collect sound
-- GUI For control references
 
 ### C# Scripts Built
 - PlayerController (Movement)
 - GameQuitter
 - GameStarter
-- PauseMenuToggle
+- PauseMenu Toggle
 - StartText
 - Static Camera for Debugging
-- ControlsMenu
-- PlayerMovementInputController
-- Wheel
 
-Ben Lathrop
-###What did I do?
+## Ben Lathrop
+### What did I do?
 - Camera functionality
+- Camera verticality functions
 - Character movement tweaking
 - Character/Camera rotation functionality
 - AI Implementation fixing
 - Character Animation
+- Double jump overhaul/fix
 
-###Assets Implemented
+### Assets Implemented
 - Character Animation
+- Final tower model update
+- Crate puzzles
+- Block push puzzle 2
+- Various material updates
+- Small parkour puzzle (zone 1, near castle)
+- Wall puzzle update
+- Scrappy (character) remodel
 
-###C# Scripts Built
+### C# Scripts Built
 - PlayerController
 - EnemyStateManager
+- CamVertical (later merged into other script)
 
 
-Courage Agabi
-###What did I do?
+## Courage Agabi
+### What did I do?
 - AI Implementation
 
-###Assets Implemented
+### Assets Implemented
+- Grass texturing
+- Enemy model
 
-###C# Scripts Built
+### C# Scripts Built
 - EnemyStateManager
 - EnemyNavigation
 
