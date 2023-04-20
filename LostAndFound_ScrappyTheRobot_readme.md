@@ -79,8 +79,6 @@ Implemented
 - Button Press to open door
 - Sound effects: Background Music, Jump sound, shooting sound, dying sound
 
-
-
 ### Assets Implemented
 - Gun Prefab
 - Bullet Prefab
@@ -107,49 +105,64 @@ Implemented
 Implemented
 - Base Character and Level Design
 - GUI (Except for Collectibles)
-- Started Controller Integration (Not Finished)
 - Character Movement adjustments
-- Controller Implementation
+- Controller Implementation (and related refactoring)
 - Small Contribution to Puzzles
-- Character Camera Ajustments
+- Character Camera Ajustments and Senstitivity Slider
 
 ### Assets Implemented
 - Player Model
 - General Level Design (Great Wall, Starting Area, Rocket Ship, Ground, Ridges)
 - Starting Text and GUI For Starting the Game and Pause Menu
 - Kill box below the map
+- Coin collect sound
+- GUI For control references
 
 ### C# Scripts Built
 - PlayerController (Movement)
 - GameQuitter
 - GameStarter
-- PauseMenu Toggle
+- PauseMenuToggle
 - StartText
 - Static Camera for Debugging
+- ControlsMenu
+- PlayerMovementInputController
+- Wheel
 
-Ben Lathrop
+## Ben Lathrop
 ### What did I do?
 - Camera functionality
+- Camera verticality functions
 - Character movement tweaking
 - Character/Camera rotation functionality
 - AI Implementation fixing
 - Character Animation
+- Double jump overhaul/fix
 
 ### Assets Implemented
 - Character Animation
+- Final tower model update
+- Crate puzzles
+- Block push puzzle 2
+- Various material updates
+- Small parkour puzzle (zone 1, near castle)
+- Wall puzzle update
+- Scrappy (character) remodel
 
 ### C# Scripts Built
 - PlayerController
 - EnemyStateManager
+- CamVertical (later merged into other script)
 
 
-Courage Agabi
+## Courage Agabi
 ### What did I do?
 - AI Implementation
 
 ### Assets Implemented
+- Grass texturing
+- Enemy model
 
 ### C# Scripts Built
 - EnemyStateManager
 - EnemyNavigation
-
