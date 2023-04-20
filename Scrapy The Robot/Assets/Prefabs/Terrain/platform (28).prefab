@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 7117034648958423303}
   - component: {fileID: 7117034648958423302}
   - component: {fileID: 7117034648958423301}
-  - component: {fileID: 7117034648958423300}
-  - component: {fileID: 7117034648958423304}
   m_Layer: 8
   m_Name: platform (28)
   m_TagString: Ground
@@ -97,34 +95,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.4090801, z: 1}
   m_Center: {x: -7.2269174e-10, y: 0.204743, z: 2.0858684e-10}
---- !u!111 &7117034648958423300
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7117034648958423298}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: c1e8975d5e7514a10bfdcff6e68c91ac, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: c1e8975d5e7514a10bfdcff6e68c91ac, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!114 &7117034648958423304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7117034648958423298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a9d1afcd76e94b1bb3bb39e7c7e0228, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  movePlatform: {fileID: 7117034648958423298}
-  character: {fileID: 0}
