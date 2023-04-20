@@ -96,25 +96,29 @@ Implemented
 Implemented
 - Base Character and Level Design
 - GUI (Except for Collectibles)
-- Started Controller Integration (Not Finished)
 - Character Movement adjustments
-- Controller Implementation
+- Controller Implementation (and related refactoring)
 - Small Contribution to Puzzles
-- Character Camera Ajustments
+- Character Camera Ajustments and Senstitivity Slider
 
 ### Assets Implemented
 - Player Model
 - General Level Design (Great Wall, Starting Area, Rocket Ship, Ground, Ridges)
 - Starting Text and GUI For Starting the Game and Pause Menu
 - Kill box below the map
+- Coin collect sound
+- GUI For control references
 
 ### C# Scripts Built
 - PlayerController (Movement)
 - GameQuitter
 - GameStarter
-- PauseMenu Toggle
+- PauseMenuToggle
 - StartText
 - Static Camera for Debugging
+- ControlsMenu
+- PlayerMovementInputController
+- Wheel
 
 Ben Lathrop
 ###What did I do?
