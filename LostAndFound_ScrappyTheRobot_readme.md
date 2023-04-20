@@ -73,14 +73,22 @@ Keys to Help TAs
 ### What did I do?
 Implemented 
 - Built the gun, in addition to shooting mechanics and effects
-- Each of the 5 Puzzles(level Design)
+- Level Design: Crate Wall, Caves
+- Contributed to puzzles ex: Cave Puzzle,Rocketship Puzzle, Castle Puzzle
 - The elevator animations
+- Button Press to open door
+- Sound effects: Background Music, Jump sound, shooting sound, dying sound
+
+
 
 ### Assets Implemented
 - Gun Prefab
 - Bullet Prefab
 - attackSphere
 - elevator
+- Container Crates
+- Cave 
+- Doors
 
 
 ### C# Scripts Built
@@ -89,6 +97,9 @@ Implemented
 - ballLife
 - BulletController
 - spawnBall
+- arrowMover
+- DoorOpen
+- startElevator
 
 
 ## Guy Broome
@@ -116,39 +127,27 @@ Implemented
 - StartText
 - Static Camera for Debugging
 
-## Ben Lathrop
+Ben Lathrop
 ### What did I do?
 - Camera functionality
-- Camera verticality functions
 - Character movement tweaking
 - Character/Camera rotation functionality
 - AI Implementation fixing
 - Character Animation
-- Double jump overhaul/fix
 
 ### Assets Implemented
 - Character Animation
-- Final tower model update
-- Crate puzzles
-- Block push puzzle 2
-- Various material updates
-- Small parkour puzzle (zone 1, near castle)
-- Wall puzzle update
-- Scrappy (character) remodel
 
 ### C# Scripts Built
 - PlayerController
 - EnemyStateManager
-- CamVertical (later merged into other script)
 
 
-## Courage Agabi
+Courage Agabi
 ### What did I do?
 - AI Implementation
 
 ### Assets Implemented
-- Grass texturing
-- Enemy model
 
 ### C# Scripts Built
 - EnemyStateManager
