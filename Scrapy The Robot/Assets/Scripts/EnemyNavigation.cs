@@ -99,7 +99,8 @@ public class EnemyNavigation : MonoBehaviour
             if (AtEndOfPath() && agent.remainingDistance <= agent.stoppingDistance && Vector3.Distance(agent.transform.position, wp.transform.position) < 5)
             {
                 Debug.Log("Player game over");
-                SceneManager.LoadScene("Scrap Yard");
+                wp.transform.position = new Vector3(0, 0.5f, 0);
+                wp.transform.GetComponent<PlayerController>().playDeathSound();
             }
 
 
