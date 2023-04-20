@@ -4,38 +4,44 @@
 "GameMenuScene_Profiles"
 # **ii. How to play and what parts of the level to observe technology requirements**
 ## 3D Feel Game
-- Players can win the game by collecting all the coins
+- Players can win the game by collecting all 31 coins
 - Can press 'Esc' to bring up game menu
-- 
+- Can reference controlls in the game menu
 
 ## Goals/Sub Goals
-5 Main Puzzles
+Main Puzzles
 - Pillars
 - Movable boxes
 - Castle
 - Wall
-- Space Ship
+- Rocket
+- Cave puzzle
+- Destroyable boxes
+- Various other small puzzles
 
-
-Getting to the end of these puzzles will reward you with coins/points. When players collect all the coins they will win the game and be brought to the win screen. If a player is killed by an enemy or falls off the map they will be sent to the spawn point but their progress will remain.
+Getting to the end of these puzzles will reward you with coins. When players collect all the coins they will win the game and be brought to the win screen. If a player 
+is killed by an enemy, they fall off the map, or they touch a dangerous object such as a rolling boulder, they will be sent back to the spawn point but their progress 
+will remain.
 
 ## 3D Character/Real Time Control
 Controls
-- Up Key: Move forward
-- Down Key: Move backwards
-- Left Key: Move left
-- Right Key: Move right
--'T' Key: Shoot one bullet
-- 'Y' Key: Shoot three bullets
-- 'o' Key: Turn on laser pointer
+- Up Key or Joystick Up: Move forward
+- Down Key or Joystick Down: Move backwards
+- Left Key or Joystick Left: Move left
+- Right Key or Joystick Right: Move right
+- Left Click or Right Trigger: Shoot one bullet
+- Right Click or Left Trigger: Shoot three bullets
+- Middle Mouse or Left Bumper: Turn on laser pointer
+- Space bar or South Controller Button: Jump (Double press for double jump)
+- Move mouse or Right stick: Rotate left and right or up and down
+- 'Esc' Key or Start: Menu
+
+Navigation of the UI requires a mouse
 
 Keys to Help TAs
-- 'B' Key: Teleport to the Rocket ship
-- 'N' Key: Teleport to top of Wall
-- 'M' Key: Teleport to Origin
-- Space bar: Jump (Double press for double jump)
-- Move mouse: Rotate left and right or up and down
-
+- 'Shift' + 'B' Key: Teleport to the Rocket ship
+- 'Shift' + 'N' Key: Teleport to top of Wall
+- 'Shift' + 'M' Key: Teleport to Origin
 
 
 ## 3D World with Physical/Spatial Simulation
@@ -44,17 +50,22 @@ Keys to Help TAs
 - Destroyable crates(Can be found at starting point)
 - Movable boxes
 - Red button to open starting doors
-- Sound played when gun is shot
+- Sound played when gun is shot, when jumping, when dying, and when picking up coins
 
 
 ## AI/ RealTimeNPC
 - Can find enemies with AI right outside of starting area
-- If enemy touches scrappy he will be sent back to spawn point
+- If an enemy touches scrappy he will be sent back to spawn point
 
 ## Polish
-- Game can be paused with 'Esc' key
+- Game can be paused with 'Esc' key and sensitivity slider
+- Particle effect when coin is collected
+- Textures
+- In game world border that prevents the character from falling off the map (mostly)
+- Swaying grass
 
 # **iii. Known problem areas**
+- Enemy AI
 
 # **iv. Manifest of which files authored by each teammate:**
 
@@ -62,14 +73,20 @@ Keys to Help TAs
 ### What did I do?
 Implemented 
 - Built the gun, in addition to shooting mechanics and effects
-- Each of the 5 Puzzles(level Design)
+- Level Design: Crate Wall, Caves
+- Contributed to puzzles ex: Cave Puzzle,Rocketship Puzzle, Castle Puzzle, Push Box puzzle
 - The elevator animations
+- Button Press to open door
+- Sound effects: Background Music, Jump sound, shooting sound, dying sound
 
 ### Assets Implemented
 - Gun Prefab
 - Bullet Prefab
 - attackSphere
 - elevator
+- Container Crates
+- Cave 
+- Doors
 
 
 ### C# Scripts Built
@@ -78,6 +95,9 @@ Implemented
 - ballLife
 - BulletController
 - spawnBall
+- arrowMover
+- DoorOpen
+- startElevator
 
 
 ## Guy Broome
@@ -85,46 +105,64 @@ Implemented
 Implemented
 - Base Character and Level Design
 - GUI (Except for Collectibles)
-- Started Controller Integration (Not Finished)
 - Character Movement adjustments
+- Controller Implementation (and related refactoring)
+- Small Contribution to Puzzles
+- Character Camera Ajustments and Senstitivity Slider
 
 ### Assets Implemented
 - Player Model
 - General Level Design (Great Wall, Starting Area, Rocket Ship, Ground, Ridges)
 - Starting Text and GUI For Starting the Game and Pause Menu
 - Kill box below the map
+- Coin collect sound
+- GUI For control references
 
 ### C# Scripts Built
 - PlayerController (Movement)
 - GameQuitter
 - GameStarter
-- PauseMenu Toggle
+- PauseMenuToggle
 - StartText
 - Static Camera for Debugging
+- ControlsMenu
+- PlayerMovementInputController
+- Wheel
 
-Ben Lathrop
-###What did I do?
+## Ben Lathrop
+### What did I do?
 - Camera functionality
+- Camera verticality functions
 - Character movement tweaking
 - Character/Camera rotation functionality
 - AI Implementation fixing
 - Character Animation
+- Double jump overhaul/fix
 
-###Assets Implemented
+### Assets Implemented
 - Character Animation
+- Final tower model update
+- Crate puzzles
+- Block push puzzle 2
+- Various material updates
+- Small parkour puzzle (zone 1, near castle)
+- Wall puzzle update
+- Scrappy (character) remodel
 
-###C# Scripts Built
+### C# Scripts Built
 - PlayerController
 - EnemyStateManager
+- CamVertical (later merged into other script)
 
 
-Courage Agabi
-###What did I do?
+## Courage Agabi
+### What did I do?
 - AI Implementation
 
-###Assets Implemented
+### Assets Implemented
+- Grass texturing
+- Enemy model
 
-###C# Scripts Built
+### C# Scripts Built
 - EnemyStateManager
 - EnemyNavigation
-
