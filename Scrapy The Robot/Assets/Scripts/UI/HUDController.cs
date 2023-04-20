@@ -53,9 +53,9 @@ public class HUDController : MonoBehaviour
         Debug.Log("Coin picked up! Updating UI...");
         audioSource.PlayOneShot(clip);
 
-        if (numCoins > 10)
+        if (numCoins > 30)
         {
-            coinCounter.text = "You have collected all the coins! You win!";
+            coinCounter.text = "You have all of the coins! You win!";
         }
     }
 }
